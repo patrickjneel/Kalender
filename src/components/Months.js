@@ -17,6 +17,8 @@ class Month extends Component {
               <th className="days">Friday</th>
               <th className="days">Saturday</th>
             </tr>
+            <tr>
+            </tr>
           </tbody>
         </table>
       </div>
