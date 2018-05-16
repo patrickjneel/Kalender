@@ -1,0 +1,15 @@
+.calendar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.current-month {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.days {
+  padding: 10px;
+}
