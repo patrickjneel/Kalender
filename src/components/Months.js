@@ -1,7 +1,28 @@
 import React, { Component } from 'react';
 import './months.css';
+import JuneData from '../JuneData';
+import JulyData from '../JulyData';
 
 class Month extends Component {
+  constructor() {
+    super()
+    this.state = {
+
+    }
+  }
+
+
+  daysShown = () => {
+    return JuneData.map((day, index) => {
+      return (
+        <div key={index}>
+          <p key={`${index}${day}`}>{day.day}</p>
+          <p key={index}>{day.event}</p>
+        </div>
+      )
+    })
+  }
+
   render() {
     return (
       <div className="calendar">
@@ -18,6 +39,7 @@ class Month extends Component {
               <th className="days">Saturday</th>
             </tr>
             <tr>
+              {this.daysShown()}
             </tr>
           </tbody>
         </table>
