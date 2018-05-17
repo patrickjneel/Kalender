@@ -16,12 +16,13 @@
 
 .calendar-body {
   border: 1px solid red;
-  width: 74%;
+  width: 65%;
 }
 
 .dates {
   display: flex;
   flex-wrap: wrap;
+  padding: 5px 23px;
 }
 
 .days-month {
