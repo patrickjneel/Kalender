@@ -15,9 +15,9 @@ class Month extends Component {
   daysShown = () => {
     return JuneData.map((day, index) => {
       return (
-        <div key={index}>
-          <p key={`${index}${day}`}>{day.day}</p>
-          <p key={index}>{day.event}</p>
+        <div key={index} className="days-month">
+          <p>{day.day}</p>
+          <p>{day.event}</p>
         </div>
       )
     })
@@ -27,22 +27,20 @@ class Month extends Component {
     return (
       <div className="calendar">
         <span className="current-month">June</span>
-        <table>
-          <tbody>
-            <tr>
-              <th className="days">Sunday</th>
-              <th className="days">Monday</th>
-              <th className="days">Tuesday</th>
-              <th className="days">Wednesday</th>
-              <th className="days">Thursday</th>
-              <th className="days">Friday</th>
-              <th className="days">Saturday</th>
-            </tr>
-            <tr>
-              {this.daysShown()}
-            </tr>
-          </tbody>
-        </table>
+        <div className="calendar-body">
+        <div className="weekdays">
+          <span className="days">Sunday</span>
+          <span className="days">Monday</span>
+          <span className="days">Tuesday</span>
+          <span className="days">Wednesday</span>
+          <span className="days">Thursday</span>
+          <span className="days">Friday</span>
+          <span className="days">Saturday</span>
+        </div>
+          <div className="dates">
+            {this.daysShown()}
+          </div>
+        </div>
       </div>
     )
   }

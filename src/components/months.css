@@ -14,7 +14,24 @@
   padding: 10px;
 }
 
-table {
+.calendar-body {
   border: 1px solid red;
-  width: 65%;
+  width: 74%;
+}
+
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days-month {
+  border: 1px solid black;
+  height: 125px;
+  text-align: center;
+  width: 125px;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-evenly;
 }
