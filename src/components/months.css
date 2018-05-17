@@ -6,7 +6,7 @@
 }
 
 .current-month {
-  font-size: 24px;
+  font-size: 52px;
   padding: 10px;
 }
 
@@ -35,4 +35,10 @@
 .weekdays {
   display: flex;
   justify-content: space-evenly;
+}
+
+.individual-day {
+  float: right;
+  margin: unset;
+  padding: 10px;
 }

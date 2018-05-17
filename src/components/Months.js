@@ -16,7 +16,7 @@ class Month extends Component {
     return JuneData.map((day, index) => {
       return (
         <div key={index} className="days-month">
-          <p>{day.day}</p>
+          <p class="individual-day">{day.day}</p>
           <p>{day.event}</p>
         </div>
       )
