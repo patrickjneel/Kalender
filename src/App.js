@@ -24,8 +24,8 @@ class App extends Component {
         <header className="App-header">
          <h1>Kalender</h1>
         </header>
-        <InputArea  handleEvents={this.handleEvents}/>
-        <Month />
+        <InputArea  handleEvents={this.handleEvents}  />
+        <Month events={this.state.events} />
       </div>
     );
   }

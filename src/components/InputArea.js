@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './input-area.css';
+import JuneData from '../JuneData';
 
 class InputArea extends Component {
   constructor() {
@@ -9,6 +10,14 @@ class InputArea extends Component {
       day: null,
       month: ''
     }
+  }
+
+  renderDays = () => {
+    return JuneData.map((day, index) => {
+      return (
+        <option key={index}>{day.day}</option>
+      )
+    })
   }
 
   handleChange = (event) => {
@@ -45,8 +54,7 @@ class InputArea extends Component {
           ref="day"
         >
           <option default>Select Day</option>
-          <option>1</option>
-          <option>2</option>
+          {this.renderDays()}
         </select>
         <button onClick={this.handleEvent}>
           Submit
