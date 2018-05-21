@@ -15,20 +15,21 @@ class InputArea extends Component {
 
   renderDays = () => {
     return JuneData.map((day, index) => {
-      return (
-        <option key={index}>{day.day}</option>
-      )
+      if(day.day) {
+        return (
+          <option key={index}>{day.day}</option>
+        ) 
+      }
     })
   }
 
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value })
-
   }
 
   handleEvent = () => {
     this.props.handleEvents(this.state)
-    this.setState({eventDesc: '', day: null, month: ''})
+    this.setState({eventDesc: '', day: 'Select Day', month: ''})
   }
 
   render() {
@@ -52,10 +53,9 @@ class InputArea extends Component {
           onChange={this.handleChange}
           name="day"
           value={this.state.day}
-          ref="day"
         >
           <option default>Select Day</option>
-          {this.renderDays()}
+            {this.renderDays()}
         </select>
         <button onClick={this.handleEvent}>
           Submit

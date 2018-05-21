@@ -7,9 +7,9 @@ class Month extends Component {
   
   showEvents = () => {
     if(this.props.events.length) {
-      return this.props.events.map(event => {
+      return this.props.events.map((event, index) => {
         return (
-          <div>
+          <div key={index}>
             {event.eventDesc}
           </div>
         )
