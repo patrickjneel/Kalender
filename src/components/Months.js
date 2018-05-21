@@ -4,13 +4,7 @@ import JuneData from '../JuneData';
 import JulyData from '../JulyData';
 
 class Month extends Component {
-  constructor() {
-    super()
-    this.state = {
-
-    }
-  }
-
+  
   showEvents = () => {
     if(this.props.events.length) {
       return this.props.events.map(event => {
@@ -24,7 +18,6 @@ class Month extends Component {
   }
 
   daysShown = () => {
-    
     return JuneData.map((day, index) => {
       return (
         <div key={index} className="days-month">
