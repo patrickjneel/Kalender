@@ -35,7 +35,6 @@ class Month extends Component {
   }
 
   render() {
-    
     return (
       <div className="calendar">
         <span className="current-month">June</span>
