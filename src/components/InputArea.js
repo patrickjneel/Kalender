@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './input-area.css';
 import JuneData from '../JuneData';
+import JulyData from '../JulyData';
 
 class InputArea extends Component {
   constructor() {
