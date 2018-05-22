@@ -66,7 +66,7 @@ class InputArea extends Component {
         </select>
         <button 
           onClick={this.handleEvent} 
-          disabled={!this.state.eventDesc} 
+          disabled={!this.state.eventDesc || this.state.day === 'Select Day' || this.state.month === 'Select Month'} 
         >
           Submit
         </button>
