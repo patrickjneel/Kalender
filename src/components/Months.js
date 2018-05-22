@@ -23,7 +23,7 @@ class Month extends Component {
         <div key={index} className="days-month">
           <p className="individual-day">{day.day}</p>
           <p>{day.event}</p>
-          <p>{this.showEvents()}</p>
+          <div>{this.showEvents()}</div>
         </div>
       )
     })

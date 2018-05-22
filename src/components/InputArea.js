@@ -8,7 +8,7 @@ class InputArea extends Component {
     super()
     this.state = {
       eventDesc: '',
-      day: null,
+      day: undefined,
       month: ''
     }
   }
@@ -24,8 +24,15 @@ class InputArea extends Component {
   }
 
   handleChange = (event) => {
+    console.log(event.target.value)
     this.setState({ [event.target.name]: event.target.value })
   }
+
+  // handleErrors = (event) => {
+  //   if(event.target.name !== '') {
+  //     event.target.name = true
+  //   }
+  // }
 
   handleEvent = () => {
     this.props.handleEvents(this.state)
@@ -57,7 +64,10 @@ class InputArea extends Component {
           <option default>Select Day</option>
             {this.renderDays()}
         </select>
-        <button onClick={this.handleEvent}>
+        <button 
+          onClick={this.handleEvent} 
+          disabled 
+        >
           Submit
         </button>
       </div>
