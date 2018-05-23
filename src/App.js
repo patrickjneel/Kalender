@@ -23,6 +23,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
          <h1>Kalender</h1>
+         <img className="flag" src={require('./flag-waving-250.png')} />
         </header>
         <InputArea  handleEvents={this.handleEvents}  />
         <Month events={this.state.events} />

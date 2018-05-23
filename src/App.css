@@ -1,10 +1,18 @@
-
-
 .App-header {
   background-color: #222;
   display: flex;
   justify-content: center;
-  height: 82px;
+  height: 100px;
   color: white;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.flag {
+  height: 35px;
+  padding-top: 11px;
+  width: 67px;
 }
 
