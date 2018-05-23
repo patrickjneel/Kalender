@@ -35,13 +35,13 @@ class Month extends Component {
         <span className="current-month">June</span>
         <div className="calendar-body">
         <div className="weekdays">
-          <span className="days">Sunday</span>
-          <span className="days">Monday</span>
-          <span className="days">Tuesday</span>
-          <span className="days">Wednesday</span>
-          <span className="days">Thursday</span>
-          <span className="days">Friday</span>
-          <span className="days">Saturday</span>
+          <span className="days">Søndag</span>
+          <span className="days">Mandag</span>
+          <span className="days">Tirsdag</span>
+          <span className="days">Onsdag</span>
+          <span className="days">Torsdag</span>
+          <span className="days">Fredag</span>
+          <span className="days">Lørdag</span>
         </div>
         <div className="dates">
           {this.daysShown()}

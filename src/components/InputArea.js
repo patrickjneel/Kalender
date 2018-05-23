@@ -28,12 +28,6 @@ class InputArea extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
-  // handleErrors = (event) => {
-  //   if(event.target.name !== '') {
-  //     event.target.name = true
-  //   }
-  // }
-
   handleEvent = () => {
     this.props.handleEvents(this.state)
     this.setState({eventDesc: '', day: 'Select Day', month: ''})
