@@ -8,7 +8,7 @@ class InputArea extends Component {
     super()
     this.state = {
       eventDesc: '',
-      day: undefined,
+      day: '',
       month: ''
     }
   }
@@ -60,7 +60,7 @@ class InputArea extends Component {
         </select>
         <button 
           onClick={this.handleEvent} 
-          disabled={!this.state.eventDesc || this.state.day === 'Select Day' || this.state.month === 'Select Month'} 
+          disabled={!this.state.eventDesc || this.state.day === '' || this.state.month === ''} 
         >
           Submit
         </button>
