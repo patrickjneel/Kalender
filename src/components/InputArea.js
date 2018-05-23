@@ -30,7 +30,7 @@ class InputArea extends Component {
 
   handleEvent = () => {
     this.props.handleEvents(this.state)
-    this.setState({eventDesc: '', day: 'Select Day', month: ''})
+    this.setState({eventDesc: '', day: '', month: ''})
   }
 
   render() {
