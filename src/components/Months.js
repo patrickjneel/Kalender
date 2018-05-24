@@ -5,16 +5,16 @@ import JulyData from '../JulyData';
 
 class Month extends Component {
   
-  showEvents = () => {
-    if(this.props.events.length) {
-      return this.props.events.map((event, index) => {
+  showEvents = (currentDay) => {
+    return this.props.events.map((event, index) => {   
+      if(event.day == currentDay.day){
         return (
           <div key={index}>
             {event.eventDesc}
           </div>
         )
-      })
-    }
+      }    
+    })
   }
 
   daysShown = () => {
@@ -23,13 +23,13 @@ class Month extends Component {
         <div key={index} className="days-month">
           <p className="individual-day">{day.day}</p>
           <p>{day.event}</p>
-          <div>{this.showEvents()}</div>
+          <div>{this.showEvents(day)}</div>
         </div>
       )
     })
   }
 
-  render() {    
+  render() {   
     return (
       <div className="calendar">
         <span className="current-month">June</span>

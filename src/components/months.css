@@ -15,7 +15,8 @@
 }
 
 .calendar-body {
-  border: 1px solid red;
+  border: 3px solid red;
+  padding: 5px;
   width: 65%;
 }
 
