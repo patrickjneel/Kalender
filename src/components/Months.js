@@ -8,11 +8,7 @@ class Month extends Component {
   showEvents = (currentDay) => {
     return this.props.events.map((event, index) => {   
       if(event.day == currentDay.day){
-        return (
-          <div key={index}>
-            {event.eventDesc}
-          </div>
-        )
+        return <div key={index}>{event.eventDesc}</div>
       }    
     })
   }
