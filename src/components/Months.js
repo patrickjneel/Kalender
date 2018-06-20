@@ -25,10 +25,22 @@ class Month extends Component {
     })
   }
 
-  render() {   
+  shownMonth = () => {
+    if(this.props) {
+      return this.props.events.map(month => {
+        return month.month === 'July' ?
+        <span className="current-month">July</span>
+        : <span className="current-month">June</span>
+      })
+    }
+  }
+
+
+
+  render() { 
     return (
       <div className="calendar">
-        <span className="current-month">June</span>
+        <span className="current-month">{this.shownMonth()}</span>
         <div className="calendar-body">
         <div className="weekdays">
           <span className="days">Søndag</span>
