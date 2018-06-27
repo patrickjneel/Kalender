@@ -8,14 +8,18 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      events: []
+      events: [],
+      month: 'June'
     }
   }
 
   handleEvents = (event) => {
     const allEvents = this.state.events
-    
     this.setState({ events: [...allEvents, event] })
+  }
+
+  changeMonth = (newMonth) => {
+      this.setState({ month: newMonth })
   }
 
   render() {
@@ -26,7 +30,7 @@ class App extends Component {
          <img className="flag" src={require('./flag-waving-250.png')} />
         </header>
         <InputArea  handleEvents={this.handleEvents}  />
-        <Month events={this.state.events} />
+        <Month events={this.state.events} month={this.state.month}/>
       </div>
     );
   }
