@@ -8,7 +8,7 @@ class Month extends Component {
   showEvents = (currentDay) => {
     return this.props.events.map((event, index) => {   
       if(event.day == currentDay.day && event.month === this.props.month){
-        return <div className="specific-day" key={index}>{event.eventDesc}</div>
+        return <div className="specific-day" key={index} contentEditable>{event.eventDesc}</div>
       }    
     })
   }
