@@ -23,13 +23,18 @@ class InputArea extends Component {
     })
   }
 
+  handleMonth = event => {
+    this.props.changeMonth(event.target.value);
+    this.setState({month: event.target.value});
+  }
+
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value })
   }
 
   handleEvent = () => {
     this.props.handleEvents(this.state)
-    this.setState({eventDesc: '', day: '', month: ''})
+    this.setState({ eventDesc: '', day: '', month: '' })
   }
 
   render() {
@@ -41,7 +46,7 @@ class InputArea extends Component {
           name="eventDesc"
         />
         <select
-          onChange={this.handleChange}
+          onChange={this.handleMonth}
           name="month"
           value={this.state.month}
         >

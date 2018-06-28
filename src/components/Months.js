@@ -7,14 +7,15 @@ class Month extends Component {
   
   showEvents = (currentDay) => {
     return this.props.events.map((event, index) => {   
-      if(event.day == currentDay.day){
+      if(event.day == currentDay.day && event.month === this.props.month){
         return <div className="specific-day" key={index}>{event.eventDesc}</div>
       }    
     })
   }
 
   daysShown = () => {
-    return JuneData.map((day, index) => {
+    const months = {June: JuneData, July: JulyData}
+    return months[this.props.month].map((day, index) => {
       return (
         <div key={index} className="days-month">
           <p className="individual-day">{day.day}</p>
@@ -26,15 +27,7 @@ class Month extends Component {
   }
 
   shownMonth = () => {
-    if(this.props.events.length) {
-      return this.props.events.map(month => {
-        if(month.month === 'July') {
-          return <span className="current-month">July</span> 
-        } else {
-          return <span className="current-month">June</span>
-        }
-      })
-    }
+    return this.props.month;
   }
 
   render() { 

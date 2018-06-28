@@ -29,7 +29,7 @@ class App extends Component {
          <h1>Kalender</h1>
          <img className="flag" src={require('./flag-waving-250.png')} />
         </header>
-        <InputArea  handleEvents={this.handleEvents}  />
+        <InputArea  handleEvents={this.handleEvents}  changeMonth={this.changeMonth}/>
         <Month events={this.state.events} month={this.state.month}/>
       </div>
     );
