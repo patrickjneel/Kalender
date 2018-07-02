@@ -1,8 +1,9 @@
  export default [
   {
-    name: "June"
-  },
-  {
+  day: null,
+  events: []
+ },
+ {
   day: null,
   events: []
  },

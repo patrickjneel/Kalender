@@ -1,8 +1,5 @@
  export default [
   {
-    name: "July"
-  },
-  {
   day: 1,
   events: []
  },
