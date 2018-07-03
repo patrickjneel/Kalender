@@ -14,7 +14,8 @@ class InputArea extends Component {
   }
 
   renderDays = () => {
-    return JuneData.map((day, index) => {
+    const months = { June: JuneData, July: JulyData }
+    return months[this.props.month].map((day, index) => {
       if(day.day) {
         return (
           <option key={index}>{day.day}</option>

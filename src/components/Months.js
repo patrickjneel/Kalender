@@ -14,7 +14,7 @@ class Month extends Component {
   }
 
   daysShown = () => {
-    const months = {June: JuneData, July: JulyData}
+    const months = { June: JuneData, July: JulyData }
     return months[this.props.month].map((day, index) => {
       return (
         <div key={index} className="days-month">

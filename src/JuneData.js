@@ -138,9 +138,5 @@
  {
   day: 30,
   events: []
- },
- {
-  day: 31,
-  events: []
  }
 ]
