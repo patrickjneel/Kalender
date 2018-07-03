@@ -41,8 +41,9 @@
 
 .individual-day {
   float: right;
+  font-size: 20px;
   margin: unset;
-  padding: 10px;
+  padding: 8px;
 }
 
 .specific-day {
