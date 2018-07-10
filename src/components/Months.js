@@ -49,8 +49,8 @@ class Month extends Component {
         </div>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 export default Month;
