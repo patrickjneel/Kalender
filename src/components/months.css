@@ -31,8 +31,9 @@
 .days-month {
   border: 1px solid #1b1fe1;
   height: 125px;
+  margin: 1px;
   text-align: center;
-  width: 125px;
+  width: 123px;
 }
 
 .weekdays {
